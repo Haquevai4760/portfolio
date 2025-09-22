@@ -201,3 +201,53 @@
 
 </body>
 </html>
+<style>
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  cursor: grab;
+  text-decoration: none;
+  user-select: none;
+}
+</style>
+
+<a href="https://wa.me/message/P7DNZYUA5IUBE1" id="whatsapp-button" target="_blank">
+  &#128172;
+</a>
+
+<script>
+const btn = document.getElementById("whatsapp-button");
+
+let isDragging = false;
+let offsetX, offsetY;
+
+btn.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - btn.getBoundingClientRect().left;
+  offsetY = e.clientY - btn.getBoundingClientRect().top;
+  btn.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    btn.style.left = `${e.clientX - offsetX}px`;
+    btn.style.top = `${e.clientY - offsetY}px`;
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  btn.style.cursor = "grab";
+});
+</script>
