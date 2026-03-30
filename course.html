@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      width: 300px;
+      margin: 50px auto;
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .details {
+      display: none;
+      margin: 20px auto;
+      width: 300px;
+      background: #334155;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: orange;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Course</h1>
+
+  <!-- Thumbnail -->
+  <div class="card" onclick="showDetails()">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Zero to Website & Marketing</h3>
+  </div>
+
+  <!-- Details -->
+  <div id="details" class="details">
+    <h2>Zero to Website & Marketing</h2>
+    <p>বাংলা লাইভ কোর্স</p>
+
+    <p>✔️ Website Build</p>
+    <p>✔️ Marketing</p>
+<p>
+আপনি কি নিজের কিছু শুরু করতে চান, কিন্তু কোথা থেকে শুরু করবেন বুঝতে পারছেন না? 
+হয়তো অনেকদিন ধরে ভাবছেন একটি Website বানাবেন, কিন্তু খরচ, জ্ঞান আর ভয়—সব মিলিয়ে শুরুটাই হচ্ছে না। 
+এই কোর্সটি ঠিক আপনার জন্য। এখানে আপনি ধাপে ধাপে শিখবেন কীভাবে কম খরচে নিজের Website বানাতে হয়, 
+কিভাবে সেটি নিজেই পরিচালনা করবেন এবং কিভাবে Marketing করে মানুষদের কাছে পৌঁছাবেন। 
+আমি আপনার পাশে থাকবো পুরো journey জুড়ে—যাতে আপনি আত্মবিশ্বাসের সাথে নিজের online business শুরু করতে পারেন।
+</p>
+    <h3>Fee: 1500 টাকা</h3>
+
+    <!-- Google Form Link -->
+    <a href="https://forms.gle/YOUR-LINK" target="_blank" class="btn">
+      Apply Now
+    </a>
+  </div>
+
+  <script>
+    function showDetails() {
+      document.getElementById("details").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
